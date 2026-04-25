@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Food Details</title>
+    <style>
+        /* 1. Basic background and font */
+        body {
+            font-family: Arial, sans-serif;
+             background-image: url('https://media.istockphoto.com/id/1700728948/photo/poor-wheelchair-user-receiving-free-food.jpg?s=612x612&w=0&k=20&c=HXfCghqpyQGtbg9FVBLuGIGMjfeaSs1PYVpLYJLz6AU=');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+
+            text-align: center;
+            padding-top: 50px; 
+            padding-bottom: 50px; /* Added bottom padding so it scrolls nicely */
+        }
+
+        /* 2. The main white form box */
+        .food-box {
+            background-color: rgba(230,230,230,0.6);
+            width: 350px;
+            margin: 0 auto; /* Centers the box */
+            padding: 30px;
+            border: 2px solid #28a745; /* Green border */
+            border-radius: 10px;
+        }
+
+        /* 3. The input boxes and dropdowns */
+        input[type="text"],
+        input[type="number"],
+        select {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+        }
+
+        /* 4. The green submit button */
+        button {
+            width: 95%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838; /* Slightly darker green when hovering */
+        }
+
+        /* 5. Labels for the boxes */
+        label {
+            display: block;
+            text-align: left;
+            margin-left: 5%;
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #333;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="food-box">
+        <h2 style="color: #28a745; margin-top: 0;">Donate Food</h2>
+        <p style="font-size: 14px; color: #555;">Enter the details of the surplus food.</p>
+        
+        <form>
+            <label>Full-Name</label>
+            <input type="text" placeholder="e.g., Aman Yadav" required>
+            <label>Phone Number</label>
+            <input type="tel" placeholder="e.g., 9876543210" required>
+            
+            <label>City / Region</label>
+            <input type="text" placeholder="Enter your city" required>
+
+            <label>Full Address</label>
+            <textarea rows="10" placeholder="Enter your complete street address" required></textarea>
+
+            <label>Additional Notes (Optional)</label>
+            <textarea rows="2" placeholder="Any landmark or specific instructions?"></textarea>
+
+            <label>Food Item(s)</label>
+            <input type="text" placeholder="e.g., Rice, Dal, and Mixed Veg" required>
+
+            <label>Food Type</label>
+            <select required>
+                <option value="">-- Select Type --</option>
+                <option value="veg">Vegetarian</option>
+                <option value="non-veg">Non-Vegetarian</option>
+                
+            </select>
+
+            <label>Number of Plates (approx)</label>
+            <input type="number" placeholder="e.g., 50" min="1" required>
+
+            <label>Total Quantity (Weight)</label>
+            <input type="text" placeholder="e.g., 10 kg or 5 Liters" required>
+
+            <label>When was it cooked?</label>
+            <input type="text" placeholder="e.g., Today at 2:00 PM" required>
+            
+                <a href="thanks.html" class="btn">Submit Food Details</a>
+         </form>
+
+    </div>
+
+</body>
+</html>

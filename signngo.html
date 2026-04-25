@@ -1,0 +1,90 @@
+<html>
+<head>
+    <title>Sign Up</title>
+    <style>
+        /* 1. Basic background and font */
+        body {
+   
+            background-image: url('https://cdn.vectorstock.com/i/500p/64/95/woman-donating-food-to-volunteer-at-donation-vector-62886495.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+
+
+            font-family: Arial, sans-serif;
+           	
+            text-align: center;
+            padding-top: 50px; /* Pushes the box down a bit from the top */
+        }
+
+        /* 2. The main white box */
+        .simple-box {
+                          
+            background-color: white;
+            width: 300px;
+            margin: 0 auto; /* Centers the box */
+            padding: 30px;
+            border: 2px solid #000000; /* Green border */
+            border-radius: 10px;
+        }
+
+        /* 3. The input boxes (Name, Email, Password) */
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        /* 4. The green button */
+        button {
+            width: 95%;
+            padding: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        /* 5. The link at the bottom */
+        .links {
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .links a {
+            color: #28a745;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="simple-box">
+        <h2 style="color: #000000; margin-top: 0;">Sign Up</h2>
+        <p style="font-size: 14px; color: #555;">Join us to help reduce food waste.</p>
+        
+        <form>
+            <input type="text" placeholder="First Name" required>
+            <br>
+            <input type="text" placeholder="Last Name" required>
+            <br>
+            <input type="email" placeholder="Email Address" required>
+            <br>
+            <input type="password" placeholder="Password" required>
+            <br>
+            <button type="submit">Create Account</button>
+        </form>
+
+        <div class="links">
+            Already have an account? <a href="login11.html">Log in here</a>
+        </div>
+    </div>
+
+</body>
+</html>

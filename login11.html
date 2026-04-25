@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Access Portal | User & NGO</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+         
+background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .portal-wrapper {
+            display: flex;
+            gap: 30px;
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        .auth-card {
+            flex: 1;
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            text-align: center;
+        }
+
+        /* Color Coding */
+        .user-side { border-top: 6px solid #3b82f6; }
+        .ngo-side { border-top: 6px solid #10b981; }
+
+        h2 { color: #1f2937; margin-bottom: 10px; }
+        p { color: #6b7280; font-size: 0.9rem; margin-bottom: 25px; }
+
+        .form-group {
+            text-align: left;
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: #374151;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1.5px solid #e5e7eb;
+            border-radius: 8px;
+            box-sizing: border-box;
+            transition: border-color 0.2s;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #3b82f6;
+        }
+
+        /* Buttons */
+        .btn {
+            width: 100%;
+            padding: 13px;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .user-btn { background-color: #3b82f6; }
+        .ngo-btn { background-color: #10b981; }
+
+        /* Links Area */
+        .links-container {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-size: 0.85rem;
+        }
+
+        .links-container a {
+            text-decoration: none;
+            color: #6b7280;
+        }
+
+        .links-container a:hover {
+            text-decoration: underline;
+            color: #1f2937;
+        }
+
+        .signup-link { font-weight: bold; color: #1f2937 !important; }
+
+        @media (max-width: 800px) {
+            .portal-wrapper { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="portal-wrapper">
+    
+    <div class="auth-card user-side">
+        <h2>User Login</h2>
+        <p>For individual volunteers & donors</p>
+        
+        <form action="/user/login" method="POST">
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" name="email" required placeholder="name@email.com">
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" name="password" required placeholder="••••••••">
+            </div>
+            <button type="submit" class="btn user-btn">Sign In</button>
+        </form>
+
+        <div class="links-container">
+            <a href="Forget.html">Forgot Password?</a>
+            <span>Don't have an account? <a href="signup.html">Register Here</a></span>
+        </div>
+    </div>
+
+    <div class="auth-card ngo-side">
+        <h2>NGO Login</h2>
+        <p>For verified organizations</p>
+        
+        <form action="/ngo/login" method="POST">
+            <div class="form-group">
+                <label>Organization Email</label>
+                <input type="email" name="email" required placeholder="admin@ngo-org.com">
+            </div>
+            <div class="form-group">
+                <label>Access Key</label>
+                <input type="password" name="password" required placeholder="••••••••">
+            </div>
+            <button type="submit" class="btn ngo-btn">NGO Access</button>
+        </form>
+
+        <div class="links-container">
+            <a href="Forgetngo.html">Organization Recovery</a>
+            <span>New Organization? <a href="signngo.html">Apply for Portal</a></span>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
