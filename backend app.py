@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, session
 import oracledb
-
 app = Flask(__name__)
 app.secret_key = 'mriirs_engineering_secret'
 
